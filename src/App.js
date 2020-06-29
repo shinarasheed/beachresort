@@ -5,17 +5,21 @@ import Home from './pages/Home';
 import Rooms from './pages/Rooms';
 import Room from './pages/Room';
 import { Error } from './pages/Error';
+import Navbar from './components/Navbar';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
     <>
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/rooms' component={Rooms} />
           <Route exact path='/room/:id' component={Room} />
           <Route component={Error} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
