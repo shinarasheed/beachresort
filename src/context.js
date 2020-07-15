@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import items from './data';
 
-const RoomContext = React.createContext();
+export const RoomContext = React.createContext();
 
 class RoomProvider extends Component {
   state = {
@@ -62,4 +62,4 @@ export function withRoomConsumer(Component) {
   };
 }
 
-export { RoomProvider, RoomConsumer, RoomContext };
+export default RoomProvider;
