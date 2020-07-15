@@ -14,14 +14,14 @@ const RoomsFilter = ({ rooms }) => {
   const {
     handleChange,
     type,
-    capacity,
-    price,
-    minPrice,
-    maxPrice,
-    minSize,
-    maxSize,
-    breakfast,
-    pets,
+    // capacity,
+    // price,
+    // minPrice,
+    // maxPrice,
+    // minSize,
+    // maxSize,
+    // breakfast,
+    // pets,
   } = context;
 
   //get unigue types
