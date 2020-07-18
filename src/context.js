@@ -22,13 +22,12 @@ class RoomProvider extends Component {
   };
 
   //getData
-
   getData = async () => {
     try {
       let response = await Client.getEntries({
         content_type: 'resortrooms',
-        // order: 'sys.createdAt',
-        order: 'fields.price',
+        order: 'sys.createdAt',
+        // order: 'fields.price',
       });
 
       let rooms = this.formatData(response.items);
