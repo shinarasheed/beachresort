@@ -33,7 +33,8 @@ export default class SingleRoom extends Component {
       );
     }
     const {
-      name,
+      title,
+      type,
       description,
       capacity,
       price,
@@ -48,7 +49,7 @@ export default class SingleRoom extends Component {
     return (
       <>
         <StyledHero img={mainImg || this.state.defaultBcg}>
-          <Banner title={`${name} room`}>
+          <Banner title={`${title} room`}>
             <Link to='/rooms' className='btn-primary'>
               back to rooms
             </Link>
@@ -57,7 +58,7 @@ export default class SingleRoom extends Component {
         <section className='single-room'>
           <div className='single-room-images'>
             {restImages.map((item, index) => (
-              <img key={index} src={item} alt={name} />
+              <img key={index} src={item} alt={type} />
             ))}
           </div>
           <div className='single-room-info'>
@@ -65,7 +66,7 @@ export default class SingleRoom extends Component {
               <h3>Details</h3>
               <p>{description}</p>
             </article>
-            <aricle className='info'>
+            <article className='info'>
               <h3>info</h3>
               <h6> price: ${price}</h6>
               <h6>size: ${size}SQFT</h6>
@@ -75,7 +76,7 @@ export default class SingleRoom extends Component {
               </h6>
               <h6>{pets ? 'pets allowed' : 'pets not allowed'}</h6>
               <h6>{breakfast && 'free breakfast'}</h6>
-            </aricle>
+            </article>
           </div>
         </section>
         <section className='room-extras'>

@@ -5,7 +5,7 @@ import defaultImg from '../images/room-1.jpeg';
 import PropTypes from 'prop-types';
 
 const Room = ({ room }) => {
-  const { name, slug, images, price } = room;
+  const { title, slug, images, price } = room;
   const mainImage = images[0];
   return (
     <article className='room'>
@@ -19,7 +19,7 @@ const Room = ({ room }) => {
           features
         </Link>
       </div>
-      <p className='room-info'>{name}</p>
+      <p className='room-info'>{title}</p>
     </article>
   );
 };
